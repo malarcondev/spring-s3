@@ -3,3 +3,8 @@ aws:
   s3:
     buckets:
       name: malarcondev-s3-upload
+spring:
+  datasource:
+    url: jdbc:postgresql://db-upload-instance.chcwhuvyqwvx.us-east-1.rds.amazonaws.com:5432/postgres
+    username: postgres
+    password: password
