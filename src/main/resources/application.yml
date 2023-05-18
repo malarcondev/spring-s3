@@ -8,3 +8,11 @@ spring:
     url: jdbc:postgresql://db-upload-instance.chcwhuvyqwvx.us-east-1.rds.amazonaws.com:5432/postgres
     username: postgres
     password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

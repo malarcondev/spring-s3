@@ -19,14 +19,14 @@ public class UploadController {
     )
     public void uploadCustomerProfileImage(
             @PathVariable("customerId") Integer customerId,
-            @RequestParam("file")MultipartFile file) {
+            @RequestParam("file")MultipartFile file) throws Exception {
 
         uploadService.uploadCustomerProfileImage(customerId, file);
     }
 
     @GetMapping("{customerId}/profile-image")
     public byte[] getCustomerProfileImage(
-            @PathVariable("customerId") Integer customerId) {
+            @PathVariable("customerId") Integer customerId) throws Exception {
         return uploadService.getCustomerProfileImage(customerId);
     }
 }
